@@ -56,7 +56,7 @@ button {
     font-size: 1.1rem;
     cursor: pointer;
     padding: 1.3rem;
-    /* display: block; */
+    display: block;
     width: 100%;
 }
 

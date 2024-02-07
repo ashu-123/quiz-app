@@ -65,16 +65,16 @@ submitBtn.addEventListener('click', () => {
         if (answer === quizData[currentIndex].correct) {
             score++;
         }
-    }
 
-    currentIndex++;
-    if (currentIndex < quizData.length) loadQuiz();
-    else {
-        quiz.innerHTML = `
+        currentIndex++;
+        if (currentIndex < quizData.length) loadQuiz();
+        else {
+            quiz.innerHTML = `
         <h2>You answered ${score}/${quizData.length} questions correctly!</h2>
 
         <button onClick="location.reload()">Reload</button>
         `
+        }
     }
 })
 
@@ -87,7 +87,7 @@ function getSelectedAns() {
 
     answers.forEach(answer => {
         if (answer.checked) {
-            ans = answer;
+            ans = answer.id;
         }
     });
     return ans;
